@@ -1,0 +1,16 @@
+title: hello-world
+description: working on a small test/project with my discord friend.
+template:
+  repo: hello-world-template
+  name: hello-world
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
